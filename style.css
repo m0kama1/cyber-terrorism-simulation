@@ -1,1 +1,41 @@
+body {
+  font-family: system-ui, Arial;
+  background: #0b1220;
+  color: #eaeaea;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #111a2e;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  background: #1f4cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #1639c4;
+}
 
