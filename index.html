@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <title>Cyber Terrorism Crisis Simulator</title>
+  <title>محاكاة إدارة أزمة إرهاب سيبراني</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,26 +10,62 @@
 
 <header>
   <h1>محاكاة إدارة أزمة إرهاب سيبراني</h1>
-  <p>أنت تمثّل غرفة إدارة أزمة سيبرانية وطنية. اتخذ قرارك.</p>
+  <p>أنت تمثّل غرفة إدارة أزمة سيبرانية وطنية. اتخذ قراراتك وشاهد أثرها.</p>
 </header>
 
 <main>
-  <section id="scenario">
+
+  <section id="kpis" class="card">
+    <h3>مؤشرات الموقف</h3>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">السيطرة الأمنية</div>
+        <div class="kpi-value" id="kpi-security">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">ثقة الرأي العام</div>
+        <div class="kpi-value" id="kpi-trust">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">استمرارية المرافق</div>
+        <div class="kpi-value" id="kpi-continuity">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">الضغط السياسي</div>
+        <div class="kpi-value" id="kpi-pressure">—</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scenario" class="card">
     <h2 id="phase"></h2>
     <p id="brief"></p>
   </section>
 
-  <section id="decisions">
+  <section id="decisions" class="card">
     <h3>القرارات المتاحة</h3>
     <div id="choices"></div>
   </section>
 
-  <section id="result">
-    <p id="feedback"></p>
+  <section id="result" class="card">
+    <h3>نتيجة القرار</h3>
+    <p id="feedback">اختر قرارًا لعرض النتيجة.</p>
+    <div class="row">
+      <button id="nextBtn" class="secondary" disabled>التالي</button>
+      <button id="restartBtn" class="ghost">إعادة المحاكاة</button>
+    </div>
   </section>
+
+  <section id="report" class="card hidden">
+    <h2>التقرير الختامي (After-Action Report)</h2>
+    <div id="reportBody"></div>
+    <div class="row">
+      <button id="restartBtn2" class="secondary">بدء من جديد</button>
+    </div>
+  </section>
+
 </main>
 
 <script src="app.js"></script>
 </body>
 </html>
-
